@@ -1,41 +1,39 @@
-export  interface Customer {
-    customer_id: number;
+export interface Customer {
+    customer_id: string;
     customer_name: string;
-    city: string;
-    membership_level: string;
-
+    city?: string;
+    membership_level?: string;
 }
 
-export interface Order { 
-    order_id: number;
-    customer_id: number;
-    order_date: Date;
-    shipping_city: string;
+export interface Order {
+    order_id: string;
+    customer_id: string;
+    order_date?: Date;
+    shipping_city?: string;
 }
 
 export interface Product {
-    product_id: number;
+    product_id: string;
     product_name: string;
-    category: string;
-    unit_price: number;
+    category?: string;
+    unit_price?: number;
 }
 
 export interface OrderItem {
-    order_item_id: number;
-    product_id: number;
-    quantity: number;
-    discount: number;
+    order_id: string;
+    product_id: string;
+    quantity?: number;
+    discount?: number;
 }
 
 export interface Vendor {
-    vendor_id: number;  
+    vendor_id: string;
     vendor_name: string;
-    city: string;
+    city?: string;
 }
 
-export interface supplies {
-    vendor_id: number;
-    product_id: number;
-    stock_quantity: number;
-    
+export interface Supply {
+    vendor_id: string;
+    product_id: string;
+    stock_quantity?: number;
 }
