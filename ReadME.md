@@ -122,5 +122,5 @@ GET http://localhost:3000/api/v1/customers
 
 ## Contributors
 
-- [Your name]
-- [Your friend's name]
+- [Neil Nikko Marianno Lut]
+- [Fletcher Jan Malala]
