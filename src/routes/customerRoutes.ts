@@ -16,8 +16,7 @@ router.get("/", async (req: Request, res: Response) => {
 });
 
 // POST /api/v1/customers 
-// Description: Creates a new customer record.
-// Success Response ( 201 Created ): Newly created customer object.
+
 router.post("/", async (req: Request, res: Response) => {
   try {
     const { customer_id, customer_name, city, membership_level } = req.body;
@@ -38,8 +37,7 @@ router.post("/", async (req: Request, res: Response) => {
 });
 
 // GET api/customers/:id (api/customers/C101) 
-// Description: Retrieves details for a single customer by their customer_id .
-// Error Response ( 404 Not Found ): If no customer with that ID exists
+
 router.get("/:customer_id", async (req: Request, res: Response) => {
   try {
     const result = await pool.query<Customer>(
@@ -56,9 +54,7 @@ router.get("/:customer_id", async (req: Request, res: Response) => {
 });
 
 // PUT /api/v1/customers/:id
-// Description: Updates an existing customer's city and/or membership_level.
-// Success Response ( 200 OK ): Updated customer object.
-// Error Response ( 404 Not Found ): If no customer with that ID exists.
+
 router.put("/:customer_id", async (req: Request, res: Response) => {
   try {
     const { city, membership_level } = req.body;
@@ -83,9 +79,7 @@ router.put("/:customer_id", async (req: Request, res: Response) => {
 });
 
 // DELETE /api/v1/customers/:id
-// Description: Removes a customer from the database.
-// Success Response ( 200 OK ): Success message.
-// Error Response ( 404 Not Found ): If no customer with that ID exists.
+
 router.delete("/:customer_id", async (req: Request, res: Response) => {
   try {
     const result = await pool.query(
@@ -106,5 +100,3 @@ router.delete("/:customer_id", async (req: Request, res: Response) => {
 });
 
 export default router;
-
-//done

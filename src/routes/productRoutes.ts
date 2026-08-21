@@ -5,7 +5,7 @@ import { Product } from "../types";
 const router = Router();
 
 // GET /api/v1/products
-// Supports optional ?category filter
+
 router.get("/", async (req: Request, res: Response) => {
   try {
     const { category } = req.query;
