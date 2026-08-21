@@ -21,8 +21,8 @@ app.use('/api/v1/customers', customerRoutes);
 // app.use('/api/v1/order-items', orderItemRoutes);
 // app.use('/api/v1/orders', orderRoutes);
 // app.use('/api/v1/products', productRoutes);
-// app.use('/api/v1/supplies', suppliesRoutes);
-// app.use('/api/v1/vendors', vendor);
+app.use('/api/v1/supplies', suppliesRoutes);
+app.use('/api/v1/vendors', vendor);
 
 
 app.listen(PORT, () => {
